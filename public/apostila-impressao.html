@@ -4672,7 +4672,7 @@ a { color: inherit; text-decoration: none; }
     <div class="options">
       <button class="option" data-letter="A"><span class="option-letter">A</span><span>Algum condômino que votou em Joaquim votou em Alícia.</span></button>
       <button class="option" data-letter="B"><span class="option-letter">B</span><span>Algum condômino que votou em Ondina votou em Alícia.</span></button>
-      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Nenhum condômino que voltou em Ondina votou em Joaquim.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Nenhum condômino que votou em Ondina votou em Joaquim.</span></button>
       <button class="option" data-letter="D"><span class="option-letter">D</span><span>Nenhum condômino que votou em Joaquim votou em Alícia.</span></button>
       <button class="option" data-letter="E"><span class="option-letter">E</span><span>Nenhum condômino que votou em Joaquim votou em Ondina.</span></button>
     </div>
@@ -5146,7 +5146,8 @@ a { color: inherit; text-decoration: none; }
       <strong>Gabarito: D</strong><br>
       Diana=Norte. Carlos em frente=Sul. Bruno à direita de Diana=Leste. Sobra Ana=Oeste.<br>
       Frente-a-frente: Norte↔Sul (Diana↔Carlos) e Leste↔Oeste (Bruno↔Ana).<br>
-      <strong>Ana está em frente a Bruno.</strong> ✓
+      <strong>Ana está em frente a Bruno.</strong> ✓<br>
+      <em>Nota de convenção:</em> aqui "à direita" é lido na vista de cima do desenho. Se você usar a perspectiva de quem está sentado voltado ao centro, Leste e Oeste se invertem (Bruno=Oeste, Ana=Leste) — mas os pares frente a frente são os mesmos e o gabarito não muda.
     </div>
   </div>
 
@@ -5184,7 +5185,7 @@ a { color: inherit; text-decoration: none; }
     </div>
     <div class="question-statement">Cinco amigos — Laura, Davi, Pedro, Lucas e Ana — foram ao cinema. Lucas quer sentar ao lado de um menino. Pedro quer sentar na ponta. Laura quer estar ao lado de Ana. Uma possível ordem de acomodação é:</div>
     <div class="options">
-      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Pedro – Lucas – Ana – Laura – Davi.</span></button>
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Pedro – Davi – Ana – Laura – Lucas.</span></button>
       <button class="option" data-letter="B"><span class="option-letter">B</span><span>Pedro – Davi – Laura – Ana – Lucas.</span></button>
       <button class="option" data-letter="C"><span class="option-letter">C</span><span>Lucas – Pedro – Laura – Ana – Davi.</span></button>
       <button class="option" data-letter="D"><span class="option-letter">D</span><span>Lucas – Davi – Laura – Ana – Pedro.</span></button>
@@ -5194,7 +5195,8 @@ a { color: inherit; text-decoration: none; }
     <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
     <div class="solution-content">
       <strong>Gabarito: D</strong> — Lucas(1)–Davi(2)–Laura(3)–Ana(4)–Pedro(5):<br>
-      • Lucas ao lado de Davi (menino) ✓ &nbsp;• Pedro na ponta ✓ &nbsp;• Laura ao lado de Ana ✓
+      • Lucas ao lado de Davi (menino) ✓ &nbsp;• Pedro na ponta ✓ &nbsp;• Laura ao lado de Ana ✓<br>
+      Em A, Lucas fica na ponta tendo apenas Laura ao lado — sem menino por perto, a pista de Lucas é violada.
     </div>
   </div>
 
@@ -6210,7 +6212,7 @@ a { color: inherit; text-decoration: none; }
     <div class="feedback"></div>
     <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
     <div class="solution-content">
-      <strong>Gabarito: D</strong> — Duas sequências intercaladas, ambas com razão +9: &nbsp; Síímpares: 4, 13, 22, 31 (+9 cada) &nbsp;|&nbsp; Sí pares: 11, 20, X, 38 (+9 cada) → 20+9=<strong>29</strong>=X.
+      <strong>Gabarito: D</strong> — Duas sequências intercaladas, ambas com razão +9: &nbsp; Posições ímpares: 4, 13, 22, 31 (+9 cada) &nbsp;|&nbsp; Posições pares: 11, 20, X, 38 (+9 cada) → 20+9=<strong>29</strong>=X.
     </div>
   </div>
 
@@ -6731,10 +6733,6 @@ a { color: inherit; text-decoration: none; }
 </template>
 
 
-
-</template>
-
-
 <style>
 /* ===== Módulo 10 — Questões Carolina ===== */
 .print-mod10-btn {
@@ -6804,7 +6802,7 @@ a { color: inherit; text-decoration: none; }
   <!-- /LESSON-GUIDE:mod-10 -->
 
   <div class="card card-accent print-skip">
-    <h3>📚 Banco completo — 55 questões da Profª Carolina</h3>
+    <h3>📚 Módulo bônus — 55 questões da Profª Carolina</h3>
     <p class="lead">Todas as questões de Raciocínio Lógico elaboradas pela <strong>Profª Carolina Krupp Consul Confortin</strong> (banca FUNDATEC), agrupadas por prova de origem, com gabarito comentado.</p>
     <p>Resolva na tela clicando nas alternativas — o resultado aparece na hora — ou imprima o caderno para resolver no papel. A versão impressa sai com folha de rosto, espaço para nome e contagem de acertos, e o gabarito comentado nas últimas folhas.</p>
     <button class="print-mod10-btn" onclick="window.printModulo10()">🖨️ Imprimir caderno de questões (PDF)</button>
@@ -41272,7 +41270,7 @@ window.MODULES = [
   { id: 'mod-9', num: '07', title: 'Diagramas Lógicos 2 — Conjuntos', desc: 'União, intersecção e diferença; a diferença entre "conjunto A" e "somente A"; problemas com 2 e 3 conjuntos.', section: 'Lógica', week: 11, weekDate: '01/08', superior: false },
   { id: 'mod-7', num: '08', title: 'Sequências Lógicas', desc: 'Identifique padrões em sequências numéricas, de letras, palavras e figuras.', section: 'Lógica', week: 9, weekDate: '18/07', superior: false },
   { id: 'mod-8', num: '09', title: 'Argumentos Dedutivos e Categóricos', desc: 'Aplique Modus Ponens, Modus Tollens e Silogismo Hipotético para validar argumentos.', section: 'Lógica', week: 10, weekDate: '25/07', superior: true },
-  { id: 'mod-10', num: '10', title: 'Questões Carolina', desc: 'Banco completo: 55 questões da Profª Carolina Krupp Consul Confortin (FUNDATEC), agrupadas por prova, com gabarito comentado.', section: 'Lógica', week: 12, weekDate: '09/08', superior: false },
+  { id: 'mod-10', num: 'Bônus', bonus: true, title: 'Questões Carolina', desc: 'Módulo bônus — banco completo: 55 questões da Profª Carolina Krupp Consul Confortin (FUNDATEC), agrupadas por prova, com gabarito comentado.', section: 'Lógica', week: 0, weekDate: '', superior: false },
 ];
 
 // ============================================================
@@ -41284,7 +41282,7 @@ window.preparePrintApostila = function(onlyModuleId) {
 
   const only = (typeof onlyModuleId === 'string') ? onlyModuleId : '';
   const modules = (window.MODULES || []).filter(m => !only || m.id === only);
-  const totalModules = (window.MODULES || []).length;
+  const totalModules = (window.MODULES || []).filter(m => !m.bonus).length;
   const questionAnswers = [];
   const activityAnswers = [];
   const stripPrintEmoji = value => String(value || '')
@@ -41339,7 +41337,7 @@ window.preparePrintApostila = function(onlyModuleId) {
       <header class="print-contents-head">
         <span>Organização do material</span>
         <h1>Sumário</h1>
-        <p>Dez módulos organizados da teoria fundamental à resolução de argumentos, conjuntos e o banco de questões da banca.</p>
+        <p>Nove módulos da teoria fundamental à resolução de argumentos e conjuntos, mais o módulo bônus com o banco de questões da banca.</p>
       </header>
       <nav class="print-toc-list" aria-label="Sumário">${tocItems}</nav>
       <div class="print-use-grid">
@@ -41448,7 +41446,7 @@ window.preparePrintApostila = function(onlyModuleId) {
       activityAnswers.push({
         moduleNum: m.num,
         label: 'Mesa redonda',
-        answer: 'Norte = Diana; Leste = Bruno; Sul = Carlos; Oeste = Ana. Qualquer rotação equivalente preserva as relações.'
+        answer: 'Norte = Diana; Leste = Bruno; Sul = Carlos; Oeste = Ana (vista de cima do desenho; na perspectiva de quem está sentado, Leste e Oeste se invertem). Qualquer rotação equivalente preserva as relações — Carlos sempre em frente a Diana e Ana em frente a Bruno.'
       });
     }
 
@@ -41616,7 +41614,7 @@ window.preparePrintApostila = function(onlyModuleId) {
       <section class="print-module" id="print-${m.id}">
         <div class="print-module-header">
           <div class="print-module-eyebrow">${m.section} · Módulo ${m.num}</div>
-          <div class="print-module-num">${m.num} / ${String(totalModules).padStart(2, '0')}</div>
+          <div class="print-module-num">${m.bonus ? 'BÔNUS' : `${m.num} / ${String(totalModules).padStart(2, '0')}`}</div>
         </div>
         <h1>${m.title}</h1>
         <p class="print-module-lede">${m.desc}</p>
@@ -42240,7 +42238,7 @@ window.fireConfetti = function() {
 
 const { useState, useEffect, useRef, useCallback, useMemo } = React;
 
-const QUESTION_COUNTS = {'mod-1': 5, 'mod-2': 5, 'mod-3': 5, 'mod-4': 5, 'mod-5': 5, 'mod-6': 4, 'mod-7': 5, 'mod-8': 5, 'mod-9': 5};
+const QUESTION_COUNTS = {'mod-1': 5, 'mod-2': 5, 'mod-3': 5, 'mod-4': 5, 'mod-5': 5, 'mod-6': 4, 'mod-7': 5, 'mod-8': 5, 'mod-9': 5, 'mod-10': 55};
 window.MODULE_QUESTION_COUNTS = QUESTION_COUNTS;
 
 /* ===== Theme ===== */
@@ -42406,7 +42404,7 @@ function Sidebar({ route, nav, stats, mobileOpen, onCloseMobile }) {
       <button key={id}
         className={'nav-item' + (route === id ? ' active' : '')}
         onClick={() => { nav(id); onCloseMobile(); }}>
-        <span className="nav-num">{num}</span>
+        <span className="nav-num">{mod.bonus ? '★' : num}</span>
         <span className="nav-label">{title}</span>
         {totals > 0 && <span className="nav-progress"><span style={{ width: pct + '%' }} /></span>}
         {done && <svg className="nav-check shown" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>}
