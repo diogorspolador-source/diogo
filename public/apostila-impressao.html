@@ -6735,13 +6735,1254 @@ a { color: inherit; text-decoration: none; }
 </template>
 
 
+<style>
+/* ===== Módulo 10 — Questões Carolina ===== */
+.print-mod10-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px 22px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-md);
+  font: 700 14px/1 var(--sans);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.print-mod10-btn:hover { background: var(--accent-2); transform: translateY(-1px); }
 
+@media print {
+  .print-simulado-head {
+    break-after: page;
+    page-break-after: always;
+  }
+  .print-simulado-head .print-simulado-title {
+    font-size: 26pt !important;
+    line-height: 1.05 !important;
+    margin: 6mm 0 3mm !important;
+    text-transform: none !important;
+  }
+  .print-simulado-sub {
+    font-size: 10.5pt !important;
+    max-width: 150mm;
+    margin: 0 0 10mm !important;
+  }
+  .print-simulado-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 5mm;
+    font-size: 10pt;
+    margin: 0 0 10mm;
+  }
+  .print-simulado-line {
+    display: inline-block;
+    width: 110mm;
+    border-bottom: 0.8pt solid #111;
+    height: 4mm;
+    vertical-align: bottom;
+  }
+  .print-simulado-instrucoes {
+    border: 1pt solid #111;
+    padding: 4mm 5mm;
+    font-size: 9.5pt;
+  }
+  .print-simulado-instrucoes strong {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 8.5pt;
+    margin-bottom: 2mm;
+  }
+  .print-simulado-instrucoes p { margin: 0 !important; }
+}
+</style>
 
+<template id="content-mod-10">
+  <!-- /LESSON-GUIDE:mod-10 -->
 
+  <div class="card card-accent print-skip">
+    <h3>📚 Banco completo — 55 questões da Profª Carolina</h3>
+    <p class="lead">Todas as questões de Raciocínio Lógico elaboradas pela <strong>Profª Carolina Krupp Consul Confortin</strong> (banca FUNDATEC), agrupadas por prova de origem, com gabarito comentado.</p>
+    <p>Resolva na tela clicando nas alternativas — o resultado aparece na hora — ou imprima o caderno para resolver no papel. A versão impressa sai com folha de rosto, espaço para nome e contagem de acertos, e o gabarito comentado nas últimas folhas.</p>
+    <button class="print-mod10-btn" onclick="window.printModulo10()">🖨️ Imprimir caderno de questões (PDF)</button>
+  </div>
 
+  <h3 style="margin-top:48px; font-size:24px;">📝 Prova · GHC 2026 (5 questões)</h3>
 
+  <div class="question" data-correct="D" id="q-m10-1">
+    <div class="question-header">
+      <span class="question-num">Q1</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">GHC 2026</span>
+      </span>
+    </div>
+    <div class="question-statement">Assinale a alternativa que apresenta uma proposição simples.</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Você foi ao dentista?</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Ana foi à farmácia e Camila foi ao shopping.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Amanda não foi trabalhar hoje, Cristiano foi?</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Larissa é auxiliar de farmácia.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Marta é amiga de Lurdes e Mateus é sobrinho de Carlos.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: D</strong> — Proposição simples é uma frase declarativa única, com valor lógico V ou F, sem conectivos. A e C são interrogativas (não são proposições); B e E usam o conectivo “e”, logo são compostas. “Larissa é auxiliar de farmácia” é declarativa e única: proposição simples.</div>
+  </div>
 
+  <div class="question" data-correct="B" id="q-m10-2">
+    <div class="question-header">
+      <span class="question-num">Q2</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">GHC 2026</span>
+      </span>
+    </div>
+    <div class="question-statement">Analise as proposições compostas abaixo e assinale aquela que tem resultado lógico final falso.</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Se 2 + 2 = 4, então 3 + 4 = 7.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>O dobro de 5 é igual a 10, e o triplo de 3 é igual a 6.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>4 + 1 = 5 ou 1 + 2 = 7.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>O dobro de 10 é igual a 30 ou a metade de 20 é igual a 10.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Se 6 + 2 = 9, então 10 + 2 = 12.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — Em B temos V ∧ F (o triplo de 3 é 9, não 6), e a conjunção com uma parte falsa é FALSA. Conferindo as demais: A é V→V = V; C é V∨F = V; D é F∨V = V; E é F→V = V (condicional com antecedente falso é sempre verdadeira).</div>
+  </div>
 
+  <div class="question" data-correct="A" id="q-m10-3">
+    <div class="question-header">
+      <span class="question-num">Q3</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">GHC 2026</span>
+      </span>
+    </div>
+    <div class="question-statement">Se Marta é atendente, então Luiza é motorista. Se Luiza é motorista, então Júlia é costureira. Se Júlia é costureira, então Antônio é agente administrativo. Se Antônio é agente administrativo, então Maria trabalha no laboratório. Se Maria trabalha no laboratório, então Cristina é professora. Considerando que Cristina não seja professora, é correto afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Marta não é atendente.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Luiza é motorista, e Antônio, pedreiro.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Júlia é agente administrativo.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Maria trabalha no laboratório.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Marta e Luiza são motoristas.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: A</strong> — Cadeia de condicionais com a ponta final negada: aplica-se o modus tollens de trás para frente. Cristina não é professora, então Maria não trabalha no laboratório, Antônio não é agente administrativo, Júlia não é costureira, Luiza não é motorista e, por fim, Marta não é atendente.</div>
+  </div>
+
+  <div class="question" data-correct="B" id="q-m10-4">
+    <div class="question-header">
+      <span class="question-num">Q4</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">GHC 2026</span>
+      </span>
+    </div>
+    <div class="question-statement">Analise a sequência numérica a seguir:<br><br><strong>5, 8, 4, 7, 3, x, 2, 5, 1, 4, y</strong><br><br>Assinale a alternativa que indica, correta e respectivamente, os valores que substituem x e y.</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>x = 6 e y = –1.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>x = 6 e y = 0.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>x = 6 e y = 2.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>x = 5 e y = –1.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>x = 5 e y = 0.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — O padrão alterna +3 e –4: 5+3=8, 8–4=4, 4+3=7, 7–4=3, 3+3=6 (x=6), 6–4=2, 2+3=5, 5–4=1, 1+3=4 e 4–4=0 (y=0). Portanto x = 6 e y = 0.</div>
+  </div>
+
+  <div class="question" data-correct="C" id="q-m10-5">
+    <div class="question-header">
+      <span class="question-num">Q5</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">GHC 2026</span>
+      </span>
+    </div>
+    <div class="question-statement">Laura e Isabela trabalham na farmácia do hospital. Laura trabalha no turno da tarde e faz faculdade à noite; é casada com Jonas e eles têm um filho chamado Germano. Isabela trabalha em dois turnos (manhã e tarde), tem uma filha chamada Maria e é casada com Enzo, que é enfermeiro no mesmo hospital. Laura mora com sua mãe, Marta, professora em uma escola estadual, e seu pai, Luiz, aposentado. Diante dessas informações, é correto afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Laura e Isabela não trabalham no mesmo turno no hospital.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Marta não é avó de Germano.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Luiz não é avô de Maria.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Enzo não trabalha no mesmo hospital que Laura.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Marta trabalha no mesmo local que Isabela.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — Maria é filha de Isabela e Enzo; Luiz é pai de Laura. Não há parentesco: Luiz NÃO é avô de Maria. As demais caem: as duas trabalham à tarde (A); Marta É avó de Germano (B); Enzo é enfermeiro no mesmo hospital (D); Marta trabalha em escola, não no hospital (E).</div>
+  </div>
+
+  <h3 style="margin-top:48px; font-size:24px;">📝 Prova · Bento Gonçalves RS 2026 (5 questões)</h3>
+
+  <div class="question" data-correct="B" id="q-m10-6">
+    <div class="question-header">
+      <span class="question-num">Q6</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">Bento Gonçalves RS 2026</span>
+      </span>
+    </div>
+    <div class="question-statement">São consideradas proposições compostas:<br><br>I. Ana é agente comunitário.<br>II. Marcos é professor e Laura é auxiliar de cozinha.<br>III. Júlio é técnico tributário.<br><br>Quais estão corretas?</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Apenas I.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Apenas II.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Apenas I e III.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Apenas II e III.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>I, II e III.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — Proposição composta exige duas ou mais proposições ligadas por conectivo. Apenas II tem o conectivo “e” unindo duas afirmações. I e III são proposições simples.</div>
+  </div>
+
+  <div class="question" data-correct="B" id="q-m10-7">
+    <div class="question-header">
+      <span class="question-num">Q7</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">Bento Gonçalves RS 2026</span>
+      </span>
+    </div>
+    <div class="question-statement">Dadas as proposições simples a seguir:<br><br>• p = V<br>• q = F<br>• r = V<br>• s = F<br><br>Analise as seguintes operações:<br><br>I. p ∨ q<br>II. r ∧ q<br>III. s → p<br><br>O resultado é falso em:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Apenas I.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Apenas II.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Apenas III.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Apenas I e II.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Apenas II e III.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — I: V ∨ F = V (a disjunção só falha com as duas falsas). II: V ∧ F = F (a conjunção exige as duas verdadeiras). III: F → V = V (antecedente falso torna a condicional verdadeira). Falso apenas em II.</div>
+  </div>
+
+  <div class="question" data-correct="A" id="q-m10-8">
+    <div class="question-header">
+      <span class="question-num">Q8</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">Bento Gonçalves RS 2026</span>
+      </span>
+    </div>
+    <div class="question-statement">Analise as afirmativas a seguir e suas respectivas negações segundo as Leis de De Morgan e assinale V, se verdadeiras, ou F, se falsas.<br><br>(&nbsp;&nbsp;) A negação de “Ana é linda e Maria é animada” está correta como “Ana não é linda e Maria não é animada”.<br>(&nbsp;&nbsp;) A negação de “Júlia é professora ou Lúcia é costureira” está correta como “Júlia não é professora e Lúcia não é costureira”.<br>(&nbsp;&nbsp;) A negação de “Mário não é economista e João é policial” está correta como “Mário é economista ou João não é policial”.<br><br>A ordem correta de preenchimento dos parênteses, de cima para baixo, é:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>F – V – V.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>F – V – F.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>F – F – F.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>V – V – V.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>V – F – V.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: A</strong> — Primeira: FALSA, pois negou as partes mas manteve o “e” (deveria trocar para “ou”). Segunda: VERDADEIRA, negação correta da disjunção (nega tudo e troca para “e”). Terceira: VERDADEIRA, negou as duas partes e trocou “e” por “ou”. Sequência: F – V – V.</div>
+  </div>
+
+  <div class="question" data-correct="D" id="q-m10-9">
+    <div class="question-header">
+      <span class="question-num">Q9</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">Bento Gonçalves RS 2026</span>
+      </span>
+    </div>
+    <div class="question-statement">Considere que todo tesoureiro gosta de matemática. Alguns desses tesoureiros gostam de física e outros desses tesoureiros não gostam de física. A partir dessas informações, é correto afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Os tesoureiros que gostam de física não gostam de matemática.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Os tesoureiros que não gostam de física não gostam de matemática.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Qualquer tesoureiro gosta de física.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Os tesoureiros que gostam de física gostam de matemática.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Todos os tesoureiros que gostam de matemática não gostam de física.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: D</strong> — A afirmação universal “todo tesoureiro gosta de matemática” vale para todos os subgrupos. Os tesoureiros que gostam de física continuam sendo tesoureiros, logo gostam de matemática. As demais alternativas contradizem o enunciado.</div>
+  </div>
+
+  <div class="question" data-correct="A" id="q-m10-10">
+    <div class="question-header">
+      <span class="question-num">Q10</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">Bento Gonçalves RS 2026</span>
+      </span>
+    </div>
+    <div class="question-statement">Em um concurso público municipal, um cursinho pesquisou a preferência de estudo dos candidatos entre as provas de português, matemática e legislação. O resultado foi:<br><br>• 127 preferem matemática;<br>• 110 preferem língua portuguesa;<br>• 82 preferem legislação;<br>• 50 preferem matemática e língua portuguesa;<br>• 40 preferem língua portuguesa e legislação;<br>• 37 preferem matemática e legislação;<br>• 30 preferem língua portuguesa, legislação e matemática.<br><br>Assinale a alternativa que apresenta, correta e respectivamente, o número de pessoas entrevistadas e a quantidade de pessoas que gostam de estudar apenas matemática.</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>222 – 70.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>222 – 77.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>222 – 127.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>476 – 70.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>476 – 207.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: A</strong> — Inclusão-exclusão: total = 127 + 110 + 82 – 50 – 40 – 37 + 30 = 222 entrevistados. Apenas matemática: 127 – (50 – 30) – (37 – 30) – 30 = 127 – 20 – 7 – 30 = 70. Resposta: 222 e 70.</div>
+  </div>
+
+  <h3 style="margin-top:48px; font-size:24px;">📝 Prova · CRA RS 2024 (2 questões)</h3>
+
+  <div class="question" data-correct="C" id="q-m10-11">
+    <div class="question-header">
+      <span class="question-num">Q11</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">CRA RS 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Qual alternativa abaixo é um exemplo de proposição simples?</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>A noite está linda e Luísa está comendo sorvete.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Clara é advogada e Mauro é arquiteto.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Marília é professora.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Suzana dançou ontem na festa e Artur já foi trabalhar.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>O dia está quente e a água da piscina está gelada.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — Todas as demais alternativas trazem duas proposições ligadas pelo conectivo “e” (compostas). “Marília é professora” é uma única afirmação declarativa: proposição simples.</div>
+  </div>
+
+  <div class="question" data-correct="A" id="q-m10-12">
+    <div class="question-header">
+      <span class="question-num">Q12</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">CRA RS 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">A negação da proposição “Lívia é motorista e Lucas não sabe dirigir” é:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Lívia não é motorista ou Lucas sabe dirigir.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Lívia não é motorista e Lucas sabe dirigir.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Lívia é motorista ou Lucas não sabe dirigir.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Lívia não é motorista ou Lucas não sabe dirigir.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Lívia é motorista e Lucas sabe dirigir.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: A</strong> — De Morgan: nega cada parte e troca “e” por “ou”. “É motorista” vira “não é motorista”; “não sabe dirigir” vira “sabe dirigir”. Resultado: “Lívia não é motorista OU Lucas sabe dirigir”.</div>
+  </div>
+
+  <h3 style="margin-top:48px; font-size:24px;">📝 Prova · CRQ PR 2023 (6 questões)</h3>
+
+  <div class="question" data-correct="C" id="q-m10-13">
+    <div class="question-header">
+      <span class="question-num">Q13</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">CRQ PR 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Considere as seguintes frases:<br><br>I. Ela é uma ótima professora.<br>II. (x² – y) é um número inteiro.<br>III. Marlene da Silva é a diretora da escola Aprender e ser Feliz.<br>IV. Lucas é padeiro na padaria Sonho de doce de leite.<br><br>Quais são sentenças abertas?</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Apenas II.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Apenas III.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Apenas I e II.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Apenas III e IV.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Apenas II, III e IV.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — Sentença aberta contém termo indefinido e por isso não recebe valor lógico. Em I, “Ela” não identifica ninguém; em II, o valor depende de x e y. III e IV têm sujeitos definidos, logo são proposições.</div>
+  </div>
+
+  <div class="question" data-correct="E" id="q-m10-14">
+    <div class="question-header">
+      <span class="question-num">Q14</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">CRQ PR 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">A negação da proposição “Ana não foi à escola e Mateus não foi ao médico” é:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Ana foi à escola e Mateus foi ao médico.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Ana foi à escola ou Mateus não foi ao médico.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Ana não foi à escola ou Mateus não foi ao médico.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Ana foi à escola e Mateus não foi ao médico.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Ana foi à escola ou Mateus foi ao médico.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: E</strong> — De Morgan sobre a conjunção: nega as duas partes (“não foi” vira “foi”) e troca “e” por “ou”: “Ana foi à escola OU Mateus foi ao médico”. A alternativa A erra por manter o conectivo “e”.</div>
+  </div>
+
+  <div class="question" data-correct="C" id="q-m10-15">
+    <div class="question-header">
+      <span class="question-num">Q15</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">CRQ PR 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Se Pedro é engenheiro, então Maria é dentista. Se Maria é dentista, então João é professor. Se João é professor, então Cláudia não é médica. Se Cláudia não é médica, então Letícia é farmacêutica. Ora, Letícia não é farmacêutica, pode-se concluir que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Pedro é engenheiro e Maria não é dentista.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Letícia é farmacêutica e Cláudia não é médica.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Cláudia é médica.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>João é professor e Maria é dentista.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Maria é dentista.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — Letícia não é farmacêutica, então “Cláudia não é médica” é falso, ou seja, Cláudia É médica. Continuando: João não é professor, Maria não é dentista, Pedro não é engenheiro. Resposta: “Cláudia é médica”.</div>
+  </div>
+
+  <div class="question" data-correct="D" id="q-m10-16">
+    <div class="question-header">
+      <span class="question-num">Q16</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">CRQ PR 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Dados os conjuntos numéricos A = {0, 1, 3, 5, 7, 8, 9}, B = {1, 2, 10} e C = {2, 3, 5, 7, 11}, é correto afirmar que (A ∩ C) ∪ B é o conjunto:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>∅</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>{0, 1, 2, 3, 5, 7, 10}</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>{1, 2, 3, 5, 7}</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>{1, 2, 3, 5, 7, 10}</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>{3, 5, 7}</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: D</strong> — Primeiro a interseção: A ∩ C = {3, 5, 7} (elementos comuns aos dois). Depois a união com B: {3, 5, 7} ∪ {1, 2, 10} = {1, 2, 3, 5, 7, 10}.</div>
+  </div>
+
+  <div class="question" data-correct="B" id="q-m10-17">
+    <div class="question-header">
+      <span class="question-num">Q17</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">CRQ PR 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Uma escola perguntou a 160 pais de alunos do Ensino Fundamental quais eram as principais atividades que eles faziam com seus filhos no final de semana. O resultado foi:<br><br>• 80 fazem esportes com os filhos.<br>• 84 assistem a filmes com os filhos.<br>• 92 passeiam com os filhos.<br>• 37 assistem a filmes e fazem esportes.<br>• 49 passeiam e assistem a filmes.<br>• 37 passeiam e fazem esportes.<br>• 17 assistem a filmes, fazem esportes e passeiam.<br><br>De acordo com essas informações, é correto afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>15 pais responderam que não realizam nenhuma dessas atividades.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>15 pais responderam que apenas assistem a filmes com seus filhos no final de semana.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Todos os pais responderam que fazem esportes, passeiam e assistem a filmes com seus filhos no final de semana.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Somente 60 pais fazem duas atividades com seus filhos no final de semana.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>25 pais responderam que apenas passeiam com seus filhos no final de semana.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — Apenas filmes: 84 – (37 – 17) – (49 – 17) – 17 = 84 – 20 – 32 – 17 = 15. Conferindo A: quem faz alguma atividade = 80 + 84 + 92 – 37 – 49 – 37 + 17 = 150, então 160 – 150 = 10 pais não fazem nenhuma (não 15). Correta: B.</div>
+  </div>
+
+  <div class="question" data-correct="A" id="q-m10-18">
+    <div class="question-header">
+      <span class="question-num">Q18</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">CRQ PR 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Carol é casada com Sandro e eles têm dois filhos: Janaína e Carlos. Carlos é casado com Luciana, que é irmã de Márcia. Clara é filha de Carlos e irmã de Júlio. Sendo assim, é correto afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Clara é neta de Carol.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Júlio é filho de Clara.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Márcia é sobrinha de Janaína.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Sandro é pai de Júlio.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Luciana não é cunhada de Janaína.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: A</strong> — Clara é filha de Carlos, e Carlos é filho de Carol: logo, Clara é NETA de Carol. Júlio é irmão de Clara (não filho); Márcia é irmã de Luciana, sem parentesco de sobrinha com Janaína; Sandro é avô de Júlio; e Luciana É cunhada de Janaína.</div>
+  </div>
+
+  <h3 style="margin-top:48px; font-size:24px;">📝 Prova · IF SC 2023 (10 questões)</h3>
+
+  <div class="question" data-correct="D" id="q-m10-19">
+    <div class="question-header">
+      <span class="question-num">Q19</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Analise as seguintes frases:<br><br>I. Ela foi ao médico.<br>II. X/2 é um número par.<br>III. Luciana Maria Carvalho é contadora e trabalha na empresa Contabilidade Carvalho.<br><br>Quais são exemplos de sentença aberta?</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Apenas I.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Apenas II.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Apenas III.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Apenas I e II.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Apenas I e III.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: D</strong> — I depende de quem é “Ela” e II depende do valor de X: ambas são sentenças abertas, sem valor lógico definido. III tem sujeito determinado, é proposição (composta, com o “e”).</div>
+  </div>
+
+  <div class="question" data-correct="E" id="q-m10-20">
+    <div class="question-header">
+      <span class="question-num">Q20</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">A negação lógica da proposição “Ezequiel nadou e Miguel não foi ao cinema” é:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Ezequiel não nadou e Miguel foi ao cinema.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Ezequiel nadou ou Miguel não foi ao cinema.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Ezequiel não nadou ou Miguel não foi ao cinema.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Ezequiel nadou e Miguel não foi ao cinema.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Ezequiel não nadou ou Miguel foi ao cinema.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: E</strong> — De Morgan: ¬(p ∧ ¬q) ≡ ¬p ∨ q. Nega as duas partes (cuidado com a dupla negação: “não foi” vira “foi”) e troca o conectivo para “ou”: “Ezequiel não nadou OU Miguel foi ao cinema”.</div>
+  </div>
+
+  <div class="question" data-correct="D" id="q-m10-21">
+    <div class="question-header">
+      <span class="question-num">Q21</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">A negação lógica da proposição “Sofia dançou ou Marcos sorriu” é:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Sofia não dançou ou Marcos não sorriu.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Sofia não dançou e Marcos sorriu.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Sofia dançou e Marcos não sorriu.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Sofia não dançou e Marcos não sorriu.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Sofia dançou ou Marcos sorriu.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: D</strong> — Negação da disjunção pelas Leis de De Morgan: nega as duas partes e troca “ou” por “e”. Resultado: “Sofia não dançou E Marcos não sorriu”.</div>
+  </div>
+
+  <div class="question" data-correct="A" id="q-m10-22">
+    <div class="question-header">
+      <span class="question-num">Q22</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Considerando que “Todos os matemáticos gostam de trigonometria”, conclui-se que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Todo aquele que não gosta de trigonometria não é matemático.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Algum matemático não gosta de trigonometria.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Todo aquele que gosta de trigonometria é matemático.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Há pessoas que não gostam de trigonometria, porém são matemáticos.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Todas as pessoas que são matemáticos não gostam de trigonometria.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: A</strong> — Contrapositiva de “Todo A é B”: quem não é B não é A. Se todos os matemáticos gostam de trigonometria, quem não gosta de trigonometria não pode ser matemático. C é a recíproca (inválida); B e D contradizem o enunciado.</div>
+  </div>
+
+  <div class="question" data-correct="D" id="q-m10-23">
+    <div class="question-header">
+      <span class="question-num">Q23</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Considere que todos os médicos gostam de química. Alguns desses médicos são pediatras e outros não são pediatras. A partir dessas afirmações, é correto concluir que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Todos os médicos que são pediatras não gostam de química.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Os médicos que gostam de química não são pediatras.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Os médicos que não são pediatras não gostam de química.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Os médicos que não são pediatras gostam de química.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Qualquer pessoa que gosta de química é médica.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: D</strong> — O “todos os médicos gostam de química” alcança qualquer subgrupo de médicos: pediatras ou não. Logo, os médicos que não são pediatras gostam de química. E é a recíproca inválida: gostar de química não faz de ninguém médico.</div>
+  </div>
+
+  <div class="question" data-correct="C" id="q-m10-24">
+    <div class="question-header">
+      <span class="question-num">Q24</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Se Liz come amendoim com Carla, então Marcos come chocolate. Se Marcos come chocolate, então Silvane anda de bicicleta. Se Silvane anda de bicicleta, então Rui gosta de cozinhar. Ora, Rui não gosta de cozinhar, logo:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Marcos não come chocolate e Liz come amendoim com Carla.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Silvane anda de bicicleta e Marcos come chocolate.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Silvane não anda de bicicleta e Liz não come amendoim com Carla.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Rui gosta de cozinhar e Marcos come chocolate.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Liz não come amendoim com Carla e Silvane anda de bicicleta.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — Negando a conclusão da cadeia (Rui não gosta de cozinhar), tudo volta negado: Silvane não anda de bicicleta, Marcos não come chocolate e Liz não come amendoim com Carla. A alternativa correta reúne duas dessas negações: C.</div>
+  </div>
+
+  <div class="question" data-correct="B" id="q-m10-25">
+    <div class="question-header">
+      <span class="question-num">Q25</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Se Ana tem um irmão, então Luciana dança ballet. Se Luciana dança ballet, então Enzo é advogado. Se Enzo é advogado, então Miguel não gosta de chocolate. Se Miguel não gosta de chocolate, então Lucas estuda. Ora, Lucas não estuda, é correto afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Ana tem um irmão.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Luciana não dança ballet.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Enzo é advogado.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Lucas estuda e Miguel dança ballet.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Miguel não gosta de chocolate.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — Lucas não estuda, então Miguel GOSTA de chocolate; então Enzo não é advogado; então Luciana não dança ballet; então Ana não tem irmão. A alternativa compatível é B: “Luciana não dança ballet”.</div>
+  </div>
+
+  <div class="question" data-correct="B" id="q-m10-26">
+    <div class="question-header">
+      <span class="question-num">Q26</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Em uma sala, há 35 pessoas fazendo uma prova de concurso público. No dia da prova, 10 pessoas trouxeram caneta azul e preta, 7 pessoas trouxeram apenas caneta da cor azul e 1 pessoa não trouxe caneta azul nem trouxe caneta preta. Quantas pessoas trouxeram apenas caneta da cor preta?</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>7.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>17.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>18.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>20.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>21.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — Com caneta: 35 – 1 = 34 pessoas. Dessas, 10 têm as duas cores e 7 têm apenas azul. Apenas preta: 34 – 10 – 7 = 17 pessoas.</div>
+  </div>
+
+  <div class="question" data-correct="A" id="q-m10-27">
+    <div class="question-header">
+      <span class="question-num">Q27</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Pedro é irmão de Vitor. Vitor é sobrinho de João. João é meu irmão. Meu pai e minha mãe tiveram dois filhos, eu e João. Sabendo disso, é possível concluir que Vitor é meu:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Filho.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Neto.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Irmão.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Primo.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Não é possível determinar.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: A</strong> — Vitor é sobrinho de João, portanto é filho de um irmão de João. Como o enunciado informa que os filhos do casal são apenas o narrador e João, conclui-se que Vitor é filho do narrador.</div>
+  </div>
+
+  <div class="question" data-correct="C" id="q-m10-28">
+    <div class="question-header">
+      <span class="question-num">Q28</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Ana e Júlia são irmãs. Ana mora no Rio Grande do Sul, e Júlia mora no Rio de Janeiro. Ana casou-se com Pedro, e eles têm dois filhos: Rafael e Gabriel. Júlia casou-se com Lucas, e eles têm uma filha de 9 anos chamada Rafaela. Gabriel tem a mesma idade de Rafaela, e Rafael é 2 anos mais velho que sua prima Rafaela. Lucas e Júlia são advogados e trabalham juntos. Ana é professora, e Pedro é engenheiro. Considerando essas informações, é correto concluir que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Gabriel e Rafaela estudam na mesma escola visto que possuem a mesma idade.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Ana e Pedro trabalham juntos e são pais de Rafaela, que tem a mesma idade de seu primo Gabriel.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Rafael é primo de Rafaela e filho de Ana. Rafael é mais velho que Rafaela.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Ana é tia de Gabriel e mãe de Rafael, que são primos de Rafaela.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Júlia é tia de Rafael. Rafael tem a mesma idade de sua prima Rafaela.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — Rafael é filho de Ana, primo de Rafaela (filha de Júlia) e 2 anos mais velho que ela: tudo confere com C. A cai porque moram em estados diferentes; B troca os pais; D chama Ana de tia do próprio filho; E erra a idade de Rafael.</div>
+  </div>
+
+  <h3 style="margin-top:48px; font-size:24px;">📝 Prova · IF SC 2024 (10 questões)</h3>
+
+  <div class="question" data-correct="C" id="q-m10-29">
+    <div class="question-header">
+      <span class="question-num">Q29</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Analise as proposições a seguir:<br><br>I. Rebeca Andrade é ginasta e medalhista olímpica.<br>II. Marcelo cozinha muito bem, e Maria é médica.<br>III. Porto Alegre é a capital do Rio Grande do Sul.<br><br>Quais são exemplos de proposições simples?</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Apenas I.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Apenas II.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Apenas III.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Apenas I e III.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Apenas II e III.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — I e II usam o conectivo “e”, formando proposições compostas. III é uma única afirmação declarativa com valor lógico definido: proposição simples. Cuidado com I: mesmo com um só sujeito, o “e” liga duas informações (é ginasta / é medalhista), o que a banca trata como composta.</div>
+  </div>
+
+  <div class="question" data-correct="B" id="q-m10-30">
+    <div class="question-header">
+      <span class="question-num">Q30</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">A negação da frase “Ana é contadora e Pedro fala alemão” é:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Ana é contadora ou Pedro fala alemão.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Ana não é contadora ou Pedro não fala alemão.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Ana não é contadora e Pedro não fala alemão.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Se Ana é contadora, Pedro não fala alemão.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Ana é contadora e Pedro não fala alemão.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — Lei de De Morgan: ¬(p ∧ q) ≡ ¬p ∨ ¬q. Nega-se cada parte E troca-se o conectivo de “e” para “ou”. A alternativa C é a pegadinha clássica: nega as partes mas mantém o “e”, o que está errado.</div>
+  </div>
+
+  <div class="question" data-correct="B" id="q-m10-31">
+    <div class="question-header">
+      <span class="question-num">Q31</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">A negação da frase “Vítor não foi ao jogo e Gilmar foi à sorveteria” é:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Vítor não foi ao jogo ou Gilmar não foi à sorveteria.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Vítor foi ao jogo ou Gilmar não foi à sorveteria.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Vítor não foi ao jogo e Gilmar não foi à sorveteria.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Vítor foi ao jogo e Gilmar não foi à sorveteria.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Vítor não foi ao jogo ou Gilmar foi à sorveteria.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — De Morgan sobre conjunção: nega cada parte e troca “e” por “ou”. Negando: “não foi ao jogo” vira “foi ao jogo”; “foi à sorveteria” vira “não foi à sorveteria”. Resultado: “Vítor foi ao jogo OU Gilmar não foi à sorveteria”.</div>
+  </div>
+
+  <div class="question" data-correct="E" id="q-m10-32">
+    <div class="question-header">
+      <span class="question-num">Q32</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Todo adolescente gosta de dormir. Sendo assim, pode-se afirmar corretamente que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Todas as pessoas que gostam de dormir são adolescentes.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Todo adolescente não gosta de dormir.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Alguém que não gosta de dormir é adolescente.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Todo aquele que não é adolescente não gosta de dormir.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Todos aqueles que não gostam de dormir não são adolescentes.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: E</strong> — “Todo A é B” garante apenas a contrapositiva: “quem não é B não é A”. Se todo adolescente gosta de dormir, alguém que NÃO gosta de dormir não pode ser adolescente. A alternativa A é a pegadinha clássica da recíproca: gostar de dormir não torna ninguém adolescente.</div>
+  </div>
+
+  <div class="question" data-correct="B" id="q-m10-33">
+    <div class="question-header">
+      <span class="question-num">Q33</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Considere que todo atleta gosta de competir. Alguns desses atletas usam óculos e outros não usam óculos. A partir dessas informações, é correto concluir que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Todo atleta usa óculos.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Os atletas que não usam óculos gostam de competir.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Nenhum atleta gosta de competir.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Os atletas que não usam óculos não gostam de competir.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Os atletas que gostam de competir não usam óculos.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — Se TODO atleta gosta de competir, a propriedade vale para qualquer subgrupo de atletas: com ou sem óculos. Logo, os que não usam óculos também gostam de competir. Usar óculos não interfere na afirmação universal.</div>
+  </div>
+
+  <div class="question" data-correct="B" id="q-m10-34">
+    <div class="question-header">
+      <span class="question-num">Q34</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Se Lúcia faz uma prova de Matemática, então Germano faz um trabalho de Geografia. Se Germano faz um trabalho de Geografia, então Mateus é professor de História. Se Mateus é professor de História, então Mariana não gosta de Ciências. Se Mariana não gosta de Ciências, então Carol é professora de Português. Considerando que Carol não é professora de Português, pode-se afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Lúcia faz uma prova de Matemática e Germano é professor de História.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Mateus não é professor de História.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Mariana não gosta de Ciências.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Lúcia faz um trabalho de Geografia.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Germano faz um trabalho de Geografia.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — Modus tollens em cadeia: negada a ponta final, toda a corrente cai para trás. Carol não é professora de Português, logo Mariana GOSTA de Ciências; logo Mateus NÃO é professor de História; logo Germano não faz o trabalho; logo Lúcia não faz a prova. A única alternativa compatível é “Mateus não é professor de História”.</div>
+  </div>
+
+  <div class="question" data-correct="C" id="q-m10-35">
+    <div class="question-header">
+      <span class="question-num">Q35</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Em uma farmácia, trabalham 30 pessoas. Os funcionários dividem-se em turnos: alguns trabalham apenas durante o dia, outros apenas durante a noite, e ainda há os que trabalham durante o dia e durante a noite. Além disso, sabe-se que:<br><br>• 10 trabalham apenas durante o dia.<br>• 12 trabalham apenas durante a noite.<br><br>Quantas pessoas trabalham durante o dia e durante a noite?</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>6.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>7.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>8.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>9.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>10.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — As três regiões (só dia, só noite, ambos) somam 30. Interseção: 30 – 10 – 12 = 8 pessoas trabalham nos dois turnos.</div>
+  </div>
+
+  <div class="question" data-correct="C" id="q-m10-36">
+    <div class="question-header">
+      <span class="question-num">Q36</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Em uma sala há 35 pessoas. Sobre elas, sabe-se que:<br><br>• 18 praticam vôlei.<br>• 10 não praticam vôlei nem natação.<br>• 15 praticam natação.<br><br>Sendo assim, quantas pessoas da sala praticam apenas vôlei?</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>7.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>8.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>10.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>12.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>20.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — Praticam algum esporte: 35 – 10 = 25. Interseção (os dois esportes): 18 + 15 – 25 = 8. Apenas vôlei: 18 – 8 = 10 pessoas.</div>
+  </div>
+
+  <div class="question" data-correct="C" id="q-m10-37">
+    <div class="question-header">
+      <span class="question-num">Q37</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Ana Clara é irmã de Juliano. Jair é irmão de Maria, e Maria é irmã de Antônia. Maria é mãe de Ana Clara e Juliano. Pedro é casado com Maria, e o casal tem dois filhos. Dadas essas informações, é correto afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Jair é pai de Juliano.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Pedro é filho de Ana Clara.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Pedro é pai de Juliano.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Antônia é sobrinha de Ana Clara.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Maria é tia de Jair.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — Maria é mãe de Ana Clara e Juliano, e Pedro é casado com Maria, sendo o casal pais dos dois filhos. Logo, Pedro é PAI de Juliano. Jair e Antônia são irmãos de Maria, ou seja, tios (não pais nem sobrinhos) das crianças.</div>
+  </div>
+
+  <div class="question" data-correct="D" id="q-m10-38">
+    <div class="question-header">
+      <span class="question-num">Q38</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF SC 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Marcos e Mariana são professores em uma escola estadual de Ensino Médio. Marcos é professor de História, e Mariana, de Matemática. Ambos se formaram na mesma universidade na cidade onde moram e trabalham. Marcos é casado e seu filho Pedro é seu aluno. Diante dessas informações, é correto afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Mariana é mãe de Pedro.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Mariana e Marcos não moram na mesma cidade.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Mariana é professora universitária.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Marcos trabalha na mesma cidade em que mora.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Pedro está cursando História na universidade.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: D</strong> — O enunciado diz que ambos moram e trabalham na mesma cidade onde se formaram: logo, Marcos trabalha na cidade em que mora. Nada afirma que Mariana é mãe de Pedro (A) e Pedro é aluno de escola de Ensino Médio, não de universidade (E).</div>
+  </div>
+
+  <h3 style="margin-top:48px; font-size:24px;">📝 Prova · IF Amapá 2023 (2 questões)</h3>
+
+  <div class="question" data-correct="B" id="q-m10-39">
+    <div class="question-header">
+      <span class="question-num">Q39</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF Amapá 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Se Pedro anda de bicicleta, então Luiz foi ao parque. Se Luiz foi ao parque, então Jean é prefeito. Se Jean é prefeito, então Cláudio não é vereador. Se Cláudio não é vereador, então Madalena é professora. Se Madalena é professora, então Renato é contador. Considerando que Renato não é contador, pode-se afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Pedro anda de patins.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Luiz não foi ao parque.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Jean é prefeito.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Cláudio não é vereador.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Madalena é professora e dentista.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — Renato não é contador, então Madalena não é professora, Cláudio É vereador, Jean não é prefeito, Luiz NÃO foi ao parque e Pedro não anda de bicicleta. A alternativa correta é “Luiz não foi ao parque”.</div>
+  </div>
+
+  <div class="question" data-correct="A" id="q-m10-40">
+    <div class="question-header">
+      <span class="question-num">Q40</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF Amapá 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Mariana, irmã gêmea de Joaquim, é filha de Aurora e Pedro. Aurora é dentista e Pedro é professor. Mariana e Joaquim estudam na mesma escola e cursam o mesmo ano letivo. Aurora gosta de andar de bicicleta com seu marido e filhos no final de semana. Pedro joga futebol com Luiz, seu amigo de infância. Diante destas informações, é correto afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>O pai de Mariana joga futebol.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Luiz é tio de Joaquim.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Aurora não gosta de andar de bicicleta.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Luiz é pai de Mariana.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Joaquim joga futebol.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: A</strong> — Pedro é o pai de Mariana e o enunciado afirma que Pedro joga futebol com Luiz. Logo, o pai de Mariana joga futebol. Luiz é apenas amigo de infância (não tio nem pai), e quem joga é Pedro, não Joaquim.</div>
+  </div>
+
+  <h3 style="margin-top:48px; font-size:24px;">📝 Prova · IF Amapá 2024 (10 questões)</h3>
+
+  <div class="question" data-correct="D" id="q-m10-41">
+    <div class="question-header">
+      <span class="question-num">Q41</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF Amapá 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Assinale a alternativa que contém uma proposição composta.</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Você vai na festa?</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Vá tomar banho!</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>João é pedreiro.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Carol é matemática e Jorge é assistente comercial.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>x + 18 = 45</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: D</strong> — A é interrogativa e B é imperativa (não são proposições); C é proposição simples; E é sentença aberta (depende de x). D une duas proposições pelo conectivo “e”: proposição composta.</div>
+  </div>
+
+  <div class="question" data-correct="C" id="q-m10-42">
+    <div class="question-header">
+      <span class="question-num">Q42</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF Amapá 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Qual das alternativas a seguir indica uma conjunção entre duas proposições p e q?</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>p ~ q</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>p ∨ q</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>p ∧ q</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>p → q</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>p ≤ q</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — A conjunção (“e”) é representada pelo símbolo ∧. O símbolo ∨ é a disjunção (“ou”) e → é a condicional (“se..., então...”). Portanto, p ∧ q.</div>
+  </div>
+
+  <div class="question" data-correct="A" id="q-m10-43">
+    <div class="question-header">
+      <span class="question-num">Q43</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF Amapá 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">A proposição lógica: “Mari bebe café e Anita come bolo”, sendo p = Mari bebe café e q = Anita come bolo, pode ser representada simbolicamente na linguagem da lógica como:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>p ∧ q</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>p ∨ q</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>p ↔ q</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>p ⊻ q</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>p → q</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: A</strong> — O conectivo “e” é a conjunção, cujo símbolo é ∧. Logo, a frase é representada por p ∧ q.</div>
+  </div>
+
+  <div class="question" data-correct="A" id="q-m10-44">
+    <div class="question-header">
+      <span class="question-num">Q44</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF Amapá 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Dadas as seguintes proposições:<br><br>• p = F<br>• q = F<br>• r = V<br>• s = V<br><br>Qual das alternativas abaixo indica uma proposição lógica com resultado verdadeiro?</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>q ∨ r</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>q ∨ p</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>r ∧ q</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>s → p</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>p ∧ s</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: A</strong> — q ∨ r = F ∨ V = V: na disjunção, basta uma verdadeira. As demais falham: q ∨ p = F ∨ F = F; r ∧ q = V ∧ F = F; s → p = V → F = F (único caso em que a condicional é falsa); p ∧ s = F ∧ V = F.</div>
+  </div>
+
+  <div class="question" data-correct="D" id="q-m10-45">
+    <div class="question-header">
+      <span class="question-num">Q45</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF Amapá 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">A negação da proposição: “Luiza não está doente e Maria é dentista” é:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Luiza não está doente ou Maria não é dentista.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Luiza está doente e Maria não é dentista.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Luiza está doente e Maria é dentista.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Luiza está doente ou Maria não é dentista.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Luiza não está doente e Maria não é dentista.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: D</strong> — De Morgan: nega cada parte e troca “e” por “ou”. “Não está doente” vira “está doente”; “é dentista” vira “não é dentista”. Resultado: “Luiza está doente OU Maria não é dentista”.</div>
+  </div>
+
+  <div class="question" data-correct="E" id="q-m10-46">
+    <div class="question-header">
+      <span class="question-num">Q46</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF Amapá 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">A negação da proposição: “Marcelo joga gamão ou Marta joga cartas” é:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Marcelo não joga gamão ou Marta joga cartas.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Marcelo não joga gamão e Marta joga cartas.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Marcelo joga gamão e Marta não joga cartas.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Marcelo não joga gamão ou Marta não joga cartas.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Marcelo não joga gamão e Marta não joga cartas.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: E</strong> — De Morgan sobre a disjunção: ¬(p ∨ q) ≡ ¬p ∧ ¬q. Nega as duas partes e troca “ou” por “e”: “Marcelo não joga gamão E Marta não joga cartas”. A alternativa D é a armadilha: nega as partes mas mantém o “ou”.</div>
+  </div>
+
+  <div class="question" data-correct="C" id="q-m10-47">
+    <div class="question-header">
+      <span class="question-num">Q47</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF Amapá 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Considere que todos os motoristas conhecem as leis de trânsito. Alguns desses motoristas dirigem moto e outros desses motoristas não dirigem moto. A partir dessas informações, é correto afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Os motoristas que dirigem moto não conhecem as leis de trânsito.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Todos os motoristas que conhecem as leis de trânsito não dirigem moto.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Os motoristas que não dirigem moto sabem as leis de trânsito.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Há motorista que não conhece as leis de trânsito.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Qualquer pessoa que conhece as leis de trânsito dirige moto.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — A universal “todos os motoristas conhecem as leis” vale para os que dirigem moto e para os que não dirigem. Logo, os que não dirigem moto também conhecem as leis. D contradiz o enunciado e E é recíproca inválida.</div>
+  </div>
+
+  <div class="question" data-correct="C" id="q-m10-48">
+    <div class="question-header">
+      <span class="question-num">Q48</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF Amapá 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Com base no diagrama lógico a seguir, qual das alternativas abaixo indica o resultado da última operação?<br><br><strong>$ + $ + $ = 60<br>$ – # – # = 6<br>3@ + # = 40<br># + 2$ – @ = ?</strong></div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>–151.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>22.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>36.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>58.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>169.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — Da primeira linha: 3$ = 60, logo $ = 20. Da segunda: 20 – 2# = 6, logo # = 7. Da terceira: 3@ + 7 = 40, logo @ = 11. Última operação: 7 + 2·20 – 11 = 7 + 40 – 11 = 36.</div>
+  </div>
+
+  <div class="question" data-correct="B" id="q-m10-49">
+    <div class="question-header">
+      <span class="question-num">Q49</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF Amapá 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">No curso de veterinária, uma pesquisa realizada para saber quantos alunos possuem cães e gatos apresentou os seguintes dados:<br><br>• 20 alunos possuem apenas cães.<br>• 23 alunos possuem apenas gatos.<br>• 24 alunos possuem cães e gatos.<br><br>Sabendo que foram entrevistadas 75 pessoas, quantas pessoas responderam que não possuem cães e gatos?</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>6.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>8.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>10.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>12.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>14.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: B</strong> — Somando as regiões do diagrama: 20 + 23 + 24 = 67 pessoas possuem algum animal. Fora dos conjuntos: 75 – 67 = 8 pessoas não possuem cães nem gatos.</div>
+  </div>
+
+  <div class="question" data-correct="E" id="q-m10-50">
+    <div class="question-header">
+      <span class="question-num">Q50</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">IF Amapá 2024</span>
+      </span>
+    </div>
+    <div class="question-statement">Ana, Lúcia e Maria foram juntas ao shopping comprar roupas. Cada uma comprou uma blusa e uma saia de cores diferentes. As cores das blusas são verde, amarela e branca, e as cores das saias são bege, jeans e preta. Sabe-se que:<br><br>• Quem comprou a blusa amarela não comprou a saia preta.<br>• Ana comprou a saia bege.<br>• Quem comprou a blusa verde comprou a saia preta.<br>• Lúcia comprou a blusa verde.<br>• Quem comprou a saia jeans comprou a blusa amarela.<br><br>Diante dessas informações, é correto afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Ana comprou saia jeans.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Maria comprou a blusa branca.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Maria comprou a saia bege.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Ana comprou a blusa amarela.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Lúcia comprou a saia preta.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: E</strong> — Lúcia tem a blusa verde e quem tem blusa verde tem saia preta: Lúcia tem a saia PRETA (alternativa E). Fechando o resto: Ana tem a saia bege, sobra a jeans para Maria; quem tem saia jeans tem blusa amarela, então Maria tem a amarela e Ana fica com a branca.</div>
+  </div>
+
+  <h3 style="margin-top:48px; font-size:24px;">📝 Prova · GHC 2023 (5 questões)</h3>
+
+  <div class="question" data-correct="A" id="q-m10-51">
+    <div class="question-header">
+      <span class="question-num">Q51</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">GHC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Considere que todos os estudantes sabem química. Alguns desses estudantes sabem inglês, e outros desses estudantes não sabem inglês. A partir dessas informações, é correto concluir que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Os estudantes que não sabem inglês sabem química.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Nenhum estudante sabe inglês e química.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Os estudantes que sabem química não sabem inglês.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Qualquer estudante que sabe química também sabe inglês.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Os estudantes que sabem inglês não sabem química.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: A</strong> — Se TODOS os estudantes sabem química, isso inclui os que sabem inglês e os que não sabem. Portanto, os estudantes que não sabem inglês sabem química. As demais alternativas restringem ou invertem indevidamente o “todos”.</div>
+  </div>
+
+  <div class="question" data-correct="D" id="q-m10-52">
+    <div class="question-header">
+      <span class="question-num">Q52</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">GHC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Se Marcelo plantou uma árvore, então Márcio arrumou o jardim. Se Márcio arrumou o jardim, então Maria foi à escola. Se Maria foi à escola, então Janaína não foi trabalhar. Se Janaína não foi trabalhar, então Emanuel não foi ao médico. Se Emanuel não foi ao médico, então Lucas jogou futebol. Ora, Lucas não jogou futebol, é correto afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Marcelo não plantou uma árvore e Márcio arrumou o jardim.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Lucas jogou futebol e Maria foi à escola.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Janaína não foi trabalhar.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Márcio não arrumou o jardim.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Emanuel não foi ao médico.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: D</strong> — Voltando pela cadeia com tudo negado: Emanuel FOI ao médico, Janaína FOI trabalhar, Maria não foi à escola, Márcio não arrumou o jardim e Marcelo não plantou a árvore. A alternativa correta é “Márcio não arrumou o jardim”.</div>
+  </div>
+
+  <div class="question" data-correct="C" id="q-m10-53">
+    <div class="question-header">
+      <span class="question-num">Q53</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">GHC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Em uma clínica médica, há 16 enfermeiras. Dessas, 4 trabalham apenas no turno da manhã e 5 trabalham apenas no turno da tarde. Sendo assim, quantas enfermeiras trabalham nos dois turnos (manhã e tarde)?</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>4 enfermeiras.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>5 enfermeiras.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>7 enfermeiras.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>8 enfermeiras.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Todas as enfermeiras.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — Total = só manhã + só tarde + os dois turnos. Logo, 16 – 4 – 5 = 7 enfermeiras trabalham nos dois turnos.</div>
+  </div>
+
+  <div class="question" data-correct="C" id="q-m10-54">
+    <div class="question-header">
+      <span class="question-num">Q54</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">GHC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">Marcos é pai do meu primo. Marcos é casado com Sandra, que é irmã da mãe da minha irmã. Logo, Sandra é minha:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Irmã.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>Mãe.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>Tia.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Avó.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>Prima.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: C</strong> — A mãe da minha irmã é a minha própria mãe. Sandra é irmã da minha mãe, portanto Sandra é minha TIA. Coerente com o resto: o marido dela, Marcos, é pai do meu primo.</div>
+  </div>
+
+  <div class="question" data-correct="E" id="q-m10-55">
+    <div class="question-header">
+      <span class="question-num">Q55</span>
+      <span class="question-meta">
+        <span class="question-tag tag-fcc">FUNDATEC · Profª Carolina</span>
+        <span class="question-tag tag-year">GHC 2023</span>
+      </span>
+    </div>
+    <div class="question-statement">João e Laura são irmãos, ambos formados na área da saúde. João é médico ortopedista e casou-se com Clara, professora de matemática na cidade em que moram; eles têm três filhas (5, 7 e 12 anos). Laura é enfermeira, trabalha em um grande hospital na cidade em que mora e tem uma filha chamada Júlia, de 7 anos. João e Laura não moram no mesmo estado. Considerando essas informações, é possível afirmar que:</div>
+    <div class="options">
+      <button class="option" data-letter="A"><span class="option-letter">A</span><span>Laura e Clara são cunhadas e moram na mesma cidade.</span></button>
+      <button class="option" data-letter="B"><span class="option-letter">B</span><span>As filhas de Clara e Laura costumam ir à escola juntas.</span></button>
+      <button class="option" data-letter="C"><span class="option-letter">C</span><span>João e Júlia moram na mesma cidade.</span></button>
+      <button class="option" data-letter="D"><span class="option-letter">D</span><span>Júlia e Laura trabalham na área da saúde.</span></button>
+      <button class="option" data-letter="E"><span class="option-letter">E</span><span>João é tio de Júlia.</span></button>
+    </div>
+    <div class="feedback"></div>
+    <button class="solution-toggle" onclick="toggleSolution(this)">💡 Ver explicação</button>
+    <div class="solution-content"><strong>Gabarito: E</strong> — Júlia é filha de Laura, e Laura é irmã de João: logo, João é TIO de Júlia. As alternativas A, B e C caem porque João e Laura não moram no mesmo estado; D cai porque Júlia tem 7 anos e não trabalha.</div>
+  </div>
+</template>
 
 
 <script>/**
@@ -40031,17 +41272,19 @@ window.MODULES = [
   { id: 'mod-9', num: '07', title: 'Diagramas Lógicos 2 — Conjuntos', desc: 'União, intersecção e diferença; a diferença entre "conjunto A" e "somente A"; problemas com 2 e 3 conjuntos.', section: 'Lógica', week: 11, weekDate: '01/08', superior: false },
   { id: 'mod-7', num: '08', title: 'Sequências Lógicas', desc: 'Identifique padrões em sequências numéricas, de letras, palavras e figuras.', section: 'Lógica', week: 9, weekDate: '18/07', superior: false },
   { id: 'mod-8', num: '09', title: 'Argumentos Dedutivos e Categóricos', desc: 'Aplique Modus Ponens, Modus Tollens e Silogismo Hipotético para validar argumentos.', section: 'Lógica', week: 10, weekDate: '25/07', superior: true },
+  { id: 'mod-10', num: '10', title: 'Questões Carolina', desc: 'Banco completo: 55 questões da Profª Carolina Krupp Consul Confortin (FUNDATEC), agrupadas por prova, com gabarito comentado.', section: 'Lógica', week: 12, weekDate: '09/08', superior: false },
 ];
 
 // ============================================================
 // PRINT - cria uma apostila propria para papel/PDF.
 // ============================================================
-window.preparePrintApostila = function() {
+window.preparePrintApostila = function(onlyModuleId) {
   const printView = document.getElementById('print-view');
   if (!printView || printView.dataset.ready === '1') return;
 
-  const modules = window.MODULES || [];
-  const totalModules = modules.length;
+  const only = (typeof onlyModuleId === 'string') ? onlyModuleId : '';
+  const modules = (window.MODULES || []).filter(m => !only || m.id === only);
+  const totalModules = (window.MODULES || []).length;
   const questionAnswers = [];
   const activityAnswers = [];
   const stripPrintEmoji = value => String(value || '')
@@ -40059,7 +41302,23 @@ window.preparePrintApostila = function() {
       </span>
     </a>`).join('');
 
-  const frontmatter = `
+  const singleModule = only ? modules[0] : null;
+  const singleFrontmatter = singleModule ? `
+    <section class="print-simulado-head">
+      <div class="print-cover-rule"></div>
+      <div class="print-cover-series">Prof. Diogo Spolador · Método Prepara · Polícia Penal · FUNDATEC · 2026</div>
+      <h1 class="print-simulado-title">${singleModule.title}</h1>
+      <p class="print-simulado-sub">${singleModule.desc}</p>
+      <div class="print-simulado-fields">
+        <div>Nome: <span class="print-simulado-line"></span></div>
+        <div>Data: ____/____/______ &nbsp;&nbsp;&nbsp; Acertos: ______ / 55</div>
+      </div>
+      <div class="print-simulado-instrucoes">
+        <strong>Instruções</strong>
+        <p>Cada questão possui 5 alternativas (A a E) e apenas UMA é correta. Assinale sem consultar as respostas. O gabarito comentado está nas últimas folhas — destaque-as antes de iniciar.</p>
+      </div>
+    </section>` : '';
+  const frontmatter = only ? singleFrontmatter : `
     <section class="print-cover">
       <div class="print-cover-rule"></div>
       <div class="print-cover-series">Polícia Penal · FUNDATEC · 2026</div>
@@ -40080,7 +41339,7 @@ window.preparePrintApostila = function() {
       <header class="print-contents-head">
         <span>Organização do material</span>
         <h1>Sumário</h1>
-        <p>Nove módulos organizados da teoria fundamental à resolução de argumentos e conjuntos.</p>
+        <p>Dez módulos organizados da teoria fundamental à resolução de argumentos, conjuntos e o banco de questões da banca.</p>
       </header>
       <nav class="print-toc-list" aria-label="Sumário">${tocItems}</nav>
       <div class="print-use-grid">
@@ -40107,7 +41366,7 @@ window.preparePrintApostila = function() {
     const moduleHeader = wrapper.querySelector('.module-header');
     if (moduleHeader) moduleHeader.remove();
 
-    wrapper.querySelectorAll('script, style, .feedback, .solution-toggle').forEach(el => el.remove());
+    wrapper.querySelectorAll('script, style, .feedback, .solution-toggle, .print-skip').forEach(el => el.remove());
 
     const symbolPalette = wrapper.querySelector('#symbol-palette');
     if (symbolPalette) symbolPalette.remove();
@@ -40418,8 +41677,14 @@ window.preparePrintApostila = function() {
   printView.setAttribute('aria-hidden', 'false');
 };
 
-window.printApostila = function() {
-  window.preparePrintApostila();
+window.printApostila = function(onlyModuleId) {
+  const only = (typeof onlyModuleId === 'string') ? onlyModuleId : '';
+  const printView = document.getElementById('print-view');
+  if (printView && printView.dataset.ready === '1') {
+    printView.innerHTML = '';
+    delete printView.dataset.ready;
+  }
+  window.preparePrintApostila(only);
 
   const toast = document.createElement('div');
   toast.textContent = 'Preparando apostila para impressão...';
@@ -40434,7 +41699,11 @@ window.printApostila = function() {
   });
 };
 
-window.addEventListener('beforeprint', window.preparePrintApostila);
+window.printModulo10 = function() {
+  window.printApostila('mod-10');
+};
+
+window.addEventListener('beforeprint', () => window.preparePrintApostila());
 
 window.addEventListener('afterprint', () => {
   const printView = document.getElementById('print-view');
